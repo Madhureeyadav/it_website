@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+.loading{
+  font-size:40px;
+  align-items: center;
+  
+  text-shadow: #162529;
+  color:#61dafb
+}

@@ -1,45 +1,99 @@
-import React from 'react'
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { NavLink } from 'react-router-dom';
+import { FaFacebook, FaInstagramSquare, FaLinkedin } from 'react-icons/fa';
+import { FaSquareTwitter } from 'react-icons/fa6';
+import { FaLocationDot } from 'react-icons/fa6';
+import { MdOutlineAlternateEmail } from 'react-icons/md';
+import { FaPhone } from 'react-icons/fa6';
+
 const Footer = () => {
   return (
+    <div className="bg-dark bg-gradient text-light py-5">
+      <div className="container">
+        <div className="row justify-content-around">
+          <div className="col-md-3 text-start ">
+            <img src="./img/p2.png" alt="company logo" height="80px" width="200px" />
+            <p className="pt-2">
+              <FaLocationDot />H-15 305 BSI Business Park <br />
+              Noida, 201301, India
+            </p>
+            <p>
+              <MdOutlineAlternateEmail />info@obiculetechnologies.com
+            </p>
+            <p>
+              <FaPhone />0123456789
+            </p>
+          </div>
+          <div className="col-md-2">
+            <p className="h4 text-light">Useful Links</p>
+            <ul className="list-unstyled fs-6 pb-4">
+              <li>
+                <NavLink to="/" className="text-decoration-none text-light">Home</NavLink>
+              </li>
+              <li>
+                <NavLink to="/about" className="text-decoration-none text-light">About</NavLink>
+              </li>
+              <li>
+                <NavLink to="/service" className="text-decoration-none text-light">Service</NavLink>
+              </li>
+              <li>
+                <NavLink to="/contact" className="text-decoration-none text-light">Contact</NavLink>
+              </li>
+            </ul>
+          </div>
+          <div className="col-md-2">
+            <p className="h4 text-light">Service Links</p>
+            <ul className="list-unstyled  fs-6 pb-4 ">
+              <li>
+                <NavLink to="/digit" className="text-decoration-none text-light">Digit Market</NavLink>
+              </li>
+              <li>
+                <NavLink to="/web" className="text-decoration-none text-light">Webdeveloper</NavLink>
+              </li>
+              <li>
+                <NavLink to="/design" className="text-decoration-none text-light">Webdesign</NavLink>
+              </li>
+              <li>
+                <NavLink to="/developer" className="text-decoration-none text-light">Software Developer</NavLink>
+              </li>
+              <li>
+                <NavLink to="/tsting" className="text-decoration-none text-light">Software Testing</NavLink>
+              </li>
+              <li>
+                <NavLink to="/android" className="text-decoration-none text-light">Anbroid</NavLink>
+              </li>
+            </ul>
+          </div>
+          <div className="col-md-2">
+            <p className="h4 text-light pb-2">  Network</p>
+            <ul className="list-unstyled flex ">
+              <li>
+                <NavLink to="/" className="text-decoration-none text-light ">
+                  <FaFacebook  size={30} className="pb-2"/>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/" className="text-decoration-none text-light">
+                  <FaInstagramSquare   size={30} className="pb-2"/>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/" className="text-decoration-none text-light">
+                  <FaSquareTwitter  size={30} className="pb-2" />
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/" className="text-decoration-none text-light">
+                  <FaLinkedin  size={30} className="pb-2"/>
+                </NavLink>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-    <div class="container  bg-dark text-light">
-
-<div class="row d-flex flex-wrap  align-items-center">
-  <div class="m-3 col-md-12 col-lg-5 p-2 border">
-
-  <form>
-  <div class="mb-3 ">
-    <label for="exampleInputEmail1" class="form-label justify-content-start flex">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="email"/>
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-  </div>
-  <div class="input-group">
-  <span class="input-group-text">First and last name</span>
-  <input type="text" aria-label="First name" class="form-control"/>
-  <input type="text" aria-label="Last name" class="form-control"/>
-</div>
-<div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label text-start">Example textarea</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-</div>
-
-
-<div class="mt-3 ">
-  <button type="submit" class="btn btn-primary">Submit</button>
-  </div>
-</form>
-
-
-
- 
-  </div>
-  <div class="m-3 col-md-12 col-lg-5 p-2 border">
-    
-  </div>
-  </div>
-  </div>
-  )
-}
-
-export default Footer
+export default Footer;

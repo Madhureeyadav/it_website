@@ -1,16 +1,17 @@
 import React from 'react'
+import {NavLink} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Navbar = () => {
   return (
-    <div>
-         <nav className="navbar sticky-top navbar-light bg-light">
+    <>
+         <nav className=" sticky-top navbar-light bg-light">
   <div className="container-fluid bg-secondary">
-    <a className="navbar-brand" href="#">email:info@gmail</a>
-    <a className="navbar-brand" href="#">number:8473387947</a>
+   <NavLink className="navbar-brand " to="/">email:info@gmail</NavLink>
+   <NavLink className="navbar-brand " to="/">number:8473387947</NavLink>
   </div>
 </nav>
-    </div>
+    </>
   )
 }
 
